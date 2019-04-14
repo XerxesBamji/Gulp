@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Gulp Instruction</title>
+  <link type="text/css" href="fonts/out/fonts.css" rel="stylesheet">
+  <link type="text/css" href="css/styles.css" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <section class="img-bg vh-100">
+    <nav class="navbar navbar-expand-lg border-bottom border-white px-5 navbar-dark">
+      <a class="navbar-brand" href="index.html">
+        <img class="w-25 logo" src="min-img/logo-white.png" />
+        <img class="w-25 logo-dark d-none" src="min-img/logo-purple.png" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown active">
+             <a class="nav-link dropdown-toggle" href="#" id="stepsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Gulp Steps
+             </a>
+             <div class="dropdown-menu" aria-labelledby="stepsDropdown">
+               <a class="dropdown-item" href="#installing-gulp">1. Installing Gulp</a>
+               <a class="dropdown-item" href="#create-project">2. Create A Project</a>
+               <a class="dropdown-item" href="#folder-structure">3. Folder Structure</a>
+               <a class="dropdown-item" href="#sass-task">4. Sass Task</a>
+               <a class="dropdown-item" href="#js-task">5. JS Task</a>
+               <a class="dropdown-item" href="#image-task">6. Image Minified</a>
+               <a class="dropdown-item" href="#gulp-watch">7. Gulp Watch Task</a>
+               <a class="dropdown-item" href="#google-fonts">8. Google Fonts</a>
+               <a class="dropdown-item" href="#gulp-file">9. Gulp File</a>
+             </div>
+           </li>
+            <li class="nav-item">
+                <a href="bootstrap.html" class="nav-link">Bootstrap, jQuery & Popper.js with npm</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-12 text-center my-auto">
+          <img width="15%" src="min-img/gulp-logo.png" />
+          <h1 class="text-white font-weight-light main-title display-3">Gulp Instructions</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4 py-md-5" id="installing-gulp">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">1. Installing Gulp</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              You need to have <a href="https://nodejs.org/en/">Node.js</a> installed onto your computer before you can install Gulp.
+            </p>
+            <p>
+              Once you have finished installing Node.js, you can then install Gulp. You can install gulp globally using the command:
+            </p>
+            <p>
+              <code>
+                $ sudo npm install gulp -g
+              </code>
+            </p>
+            <p>
+              Now that Gulp is installed, we can create a <a href="#create-project">project</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="create-project">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">2. Create a Project</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              Firstly, create a project folder. Then once you have created the folder, run this command.
+            </p>
+            <p>
+              <code>
+                $ npm init
+              </code>
+            </p>
+            <p>
+              The npm init command creates a package.json file for your project which stores information about the project, such as the dependencies like Gulp or Bootstrap.
+            </p>
+            <p>
+              You will get a prompt when running the command, but just say 'Yes'. Once the package.json file is created, we can then install Gulp into the project. To do this we need to run the command:
+            </p>
+            <p>
+              <code>
+                $ npm install gulp --save-dev
+              </code>
+            </p>
+            <p>
+              The --dev means we will save gulp under the dev depenency in package.json. If this was successful you should see a folder called node_modules with a folder called 'gulp' inside. If you install any devDependencies, this is where they will be stored.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="folder-structure">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">3. Folder Structure</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              The illustration below shows the folder structure I use to integrate with my gulp file.
+            </p>
+            <p>
+              <code>
+                <pre>
+  |- app/
+        |- css/
+        |- fonts/
+        |- images/
+        |- index.html
+        |- js/
+        |- scss/
+        |- min-img/
+        |- min-js/
+        |- index.html
+    |- gulpfile.js
+    |- node_modules/
+    |- package.json
+                </pre>
+              </code>
+            </p>
+            <p>
+              The way I have set up this project, we will use the app folder for all the development. The min-img and min-js folders are where the minified images and js files will be located.
+            </p>
+            <p>
+              When we configure gulp, we will have to remember the folder structure we have created. Now lets create the Gulp <a href="#sass-task">tasks</a> in the gulpfile.js.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="sass-task">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">4. SASS Task</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              The first thing to do is to add gulp-sass to the devDependencies in package.json. To do this you will need to run:
+            </p>
+            <p>
+              <code>
+                npm install gulp-sass --save-dev<br />
+                npm install gulp-concat --save-dev<br />
+                npm install gulp-autoprefixer --save-dev
+              </code>
+            </p>
+            <p>
+              Then the next thing to do is to 'require' gulp and gulp sass in order to use it. I will also require gulp-autoprefixer and gulp-concat. The code should look like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var autoprefixer = require('gulp-autoprefixer');
+                </pre>
+              </code>
+            </p>
+            <p>
+              Once you have added these. You can then create the rest of your task. My code looks like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
+
+gulp.task('sass', function() {
+  return gulp.src('app/scss/styles.scss') // Gets all files ending with .scss in app/scss and children dirs
+    .pipe(concat('styles.css'))
+    .pipe(sass({outputStyle: 'compressed' }))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(gulp.dest('app/css'))
+})
+
+gulp.task('default', ['sass']);
+                </pre>
+              </code>
+            </p>
+            <p>
+              To run the task:
+            </p>
+            <p>
+              <code>
+                gulp sass
+              </code>
+            </p>
+            <p>
+              or alternatively, you can run:
+            </p>
+            <p>
+              <code>
+                gulp default
+              </code>
+            </p>
+            <p>
+              gulp-concat will merge all the scss files into one. This avoids having to link many scss files. The autoprefixer will make sure your scss can be used on previous browsers. You can specify which browsers and which versions you want. For example in my code, I have said to use the last two versions of all browsers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="js-task">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">5. JS Task</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              The first thing to do is to add gulp-uglify to the devDependencies in package.json. To do this you will need to run:
+            </p>
+            <p>
+              <code>
+                npm install gulp-uglify --save-dev
+              </code>
+            </p>
+            <p>
+              Then the next thing to do is to 'require' gulp-uglify. This minifies JavaScript. The code for this task is:
+            </p>
+            <p>
+              <code>
+                <pre>
+gulp.task('scripts', function() {
+    return gulp.src('app/js/*.js')
+      .pipe(concat('main.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('app/min-js'));
+});
+
+gulp.task("default", gulp.series("sass","scripts"))
+                </pre>
+              </code>
+            </p>
+            <p>
+              To run the task:
+            </p>
+            <p>
+              <code>
+                gulp scripts
+              </code>
+            </p>
+            <p>
+              or alternatively, you can run:
+            </p>
+            <p>
+              <code>
+                gulp default
+              </code>
+            </p>
+            <p>
+              This code finds any js file inside the app/js folder and merges all of them into a file called main.js. This file is then added to the folder min-js.
+            </p>
+            <p class="text-info">
+              * The gulp.task at the bottom of both Sass and JS tasks is only needed once at the bottom of the gulpfile. This task runs all of the tasks that you have added into the gulpfile one by one.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="image-task">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">6. Image Minified Task</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              The first thing to do is to add gulp-imagemin and gulp-cache to the devDependencies in package.json. To do this you will need to run:
+            </p>
+            <p>
+              <code>
+                npm install gulp-imagemin --save-dev<br />
+                npm install gulp-cache --save-dev
+              </code>
+            </p>
+            <p>
+              Then the next thing to do is to 'require' gulp-imagemin and gulp-cache in order to use it. The code should look like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+                </pre>
+              </code>
+            </p>
+            <p>
+              Once you have added these. You can then create the rest of your task. My code looks like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+gulp.task('images', function() {
+  return gulp.src('app/images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('app/min-img'));
+});
+
+gulp.task("default", gulp.series("sass","images","scripts"))
+                </pre>
+              </code>
+            </p>
+            <p>
+              Once again to run the task:
+            </p>
+            <p>
+              <code>
+                gulp images <span class="text-body">or </span>gulp default
+              </code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="gulp-watch">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">7. Gulp Watch</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              Gulp watch is a very handy task. It allows you to run the task while developing and it will check if scripts or scss files are edited and will run the task required.
+            </p>
+            <p>
+              To run this task, you need to add this code to the gulp file:
+            </p>
+            <p>
+              <code>
+                <pre>
+gulp.task('watch', function() {
+  gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('app/js/*.js', gulp.series('scripts'));
+});
+
+gulp.task("default", gulp.series("sass","images","scripts","watch"))
+                </pre>
+              </code>
+            </p>
+            <p>
+              Once again to run the task:
+            </p>
+            <p>
+              <code>
+                gulp watch <span class="text-body">or </span>gulp default
+              </code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="google-fonts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">8. Google Fonts</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              The first thing to do is to add gulp-google-webfonts to the devDependencies in package.json. To do this you will need to run:
+            </p>
+            <p>
+              <code>
+                npm install gulp-google-webfonts --save-dev
+              </code>
+            </p>
+            <p>
+              Then the next thing to do is to 'require' gulp-google-webfonts in order to use it. The code should look like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+var googleWebFonts = require('gulp-google-webfonts');
+                </pre>
+              </code>
+            </p>
+            <p>
+              Once you have added these. You can then create the rest of your task. My code looks like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+gulp.task('fonts', function () {
+	return gulp.src('app/fonts/fonts.list')
+		.pipe(googleWebFonts(options))
+		.pipe(gulp.dest('app/fonts/out/'))
+		;
+	});
+                </pre>
+              </code>
+            </p>
+            <p>
+              To run the task:
+            </p>
+            <p>
+              <code>
+                gulp fonts
+              </code>
+            </p>
+            <p>
+              For this task to work. In your main fonts folder, you need to create a file called fonts.list. In this file you need to add the font you want and the weights you require. I am adding the font 'Poppins'. This is what my fonts.list file looks like:
+            </p>
+            <p>
+              <code>
+                <pre>
+# Google format
+Poppins:100,300,400,700
+                </pre>
+              </code>
+            </p>
+            <p>
+              With this file, the task will create a folder called 'out' inside the fonts folder. It will create a fonts.css file which can then be linked in the head of your main html file.
+            </p>
+            <p>
+              <code>
+                <xmp>
+<link type="text/css" href="fonts/out/fonts.css" rel="stylesheet" />
+                </xmp>
+              </code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="gulp-file">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">9. Gulp File</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+            This is my gulp file with everything put together.
+            </p>
+            <p>
+              <code>
+                <pre>
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+var uglify = require('gulp-uglify');
+var googleWebFonts = require('gulp-google-webfonts');
+
+var options = { };
+
+gulp.task('fonts', function () {
+	return gulp.src('app/fonts/fonts.list')
+		.pipe(googleWebFonts(options))
+		.pipe(gulp.dest('app/fonts/out/'))
+		;
+	});
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
+
+gulp.task('sass', function() {
+  return gulp.src('app/scss/styles.scss') // Gets all files ending with .scss in app/scss and children dirs
+    .pipe(concat('styles.css'))
+    .pipe(sass({outputStyle: 'compressed' }))
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(gulp.dest('app/css'))
+})
+
+gulp.task('scripts', function() {
+    return gulp.src('app/js/*.js')
+      .pipe(concat('main.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('app/min-js'));
+});
+
+gulp.task('images', function() {
+  return gulp.src('app/images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('app/min-img'));
+});
+
+gulp.task('watch', function() {
+  gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('app/js/*.js', gulp.series('scripts'));
+});
+
+gulp.task("default", gulp.series("sass","images","scripts","watch"))
+
+                </pre>
+              </code>
+            </p>
+            <p>
+              This concludes setting up Gulp within your project. If you wish to find out how to add the latest version of Bootstrap with jQuery and popper.js into your project using npm. <a href="bootstrap.html">Click here.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="min-js/main.js"></script>
+</body>
+</html>

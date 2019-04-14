@@ -1,0 +1,42 @@
+body {
+  font-family: $primary-font;
+}
+
+.img-bg {
+  background-image: url('../min-img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    margin-top: -80px;
+  }
+}
+
+.navbar {
+  .nav-link {
+    color: $white;
+  }
+}
+
+pre {
+  color: $code;
+}
+
+.width-container {
+  width: 60%;
+  margin: auto;
+}
+
+.navbar-dark {
+
+  .nav-item {
+
+    .nav-link {
+      color: $white;
+    }
+  }
+}
+
+.html-example-wrapper {
+  overflow-x: scroll;
+}

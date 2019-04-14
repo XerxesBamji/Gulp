@@ -1,0 +1,10 @@
+https://css-tricks.com/gulp-for-beginners/
+https://medium.freecodecamp.org/how-to-minify-images-with-gulp-gulp-imagemin-and-boost-your-sites-performance-6c226046e08e
+https://stackoverflow.com/questions/39665773/gulp-error-watch-task-has-to-be-a-function
+https://andy-carter.com/blog/a-beginners-guide-to-the-task-runner-gulp
+
+
+To do:
+
+Bootstrap jquery & popper - node
+Fonts

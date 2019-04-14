@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Gulp Instruction</title>
+  <link type="text/css" href="fonts/out/fonts.css" rel="stylesheet">
+  <link type="text/css" href="css/styles.css" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <section class="img-bg vh-100">
+    <nav class="navbar navbar-expand-lg border-bottom border-white px-5 navbar-dark">
+      <a class="navbar-brand" href="index.html">
+        <img class="w-25 logo" src="min-img/logo-white.png" />
+        <img class="w-25 logo-dark d-none" src="min-img/logo-purple.png" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown active">
+             <a href="index.html" class="nav-link">
+               Using Gulp
+             </a>
+           </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="stepsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Bootstrap, jQuery & Popper
+              </a>
+              <div class="dropdown-menu" aria-labelledby="stepsDropdown">
+                <a class="dropdown-item" href="#installing-bootstrap">1. Installing Bootstrap, jQuery & Popper.js</a>
+                <a class="dropdown-item" href="#linking-bootstrap">2. Linking Bootstrap</a>
+                <a class="dropdown-item" href="#linking-jquery">3. Linking jQuery & Popper.js</a>
+                <a class="dropdown-item" href="#html-example">4. HTML Example</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"></a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-12 text-center my-auto">
+          <h1 class="text-white font-weight-light main-title display-3">Installing Bootstrap, jQuery & Popper.js with npm</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="installing-bootstrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">1. Installing Bootstrap, jQuery & Popper.js</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              The first thing you need to do is to look at your package.json file. Under your devDependencies, look to see if you have any Bootstrap, jQuery or popper.js installed. If not, add them to the devDependencies. Your code will then look like this:
+            </p>
+            <p>
+              <code>
+                <pre>
+{
+  "name": "gulp-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-google-webfonts": "^2.1.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0",
+    "popper.js": "^1.15.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}
+                </pre>
+              </code>
+            </p>
+            <p>
+              Once you have added this into your package.json. Deleted your package-lock.json. Then in your working directory, run the command:
+            </p>
+            <p>
+              <code>
+                npm install
+              </code>
+            </p>
+            <p>
+                Once this is finished. You will notice in node_modules that Bootstrap, jQuery and popper.js have been added and can now be used.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="linking-bootstrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">2. Linking Bootstrap</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              To link bootstrap. You will need to import the bootstrap.scss file into your styles.scss. Add this code into your styles.scss:
+            </p>
+            <p>
+              <code>
+                @import "../../node_modules/bootstrap/scss/bootstrap";
+              </code>
+            </p>
+            <p>
+              Once this has been added, run gulp sass and Bootstrap sass will be added to your css.
+            </p>
+            <p>
+              <code>
+                npm install
+              </code>
+            </p>
+            <p>
+                Once this is finished. You will notice in node_modules that Bootstrap, jQuery and popper.js have been added and can now be used.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="linking-jquery">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">3. Linking jQuery & popper.js</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              As bootstrap.bundle includes bootstrap and popper.js, we only need two links. Bootstrap.bundle and jQuery. The links would look as follows:
+            </p>
+            <p>
+              <code>
+                <xmp>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                </xmp>
+              </code>
+            </p>
+            <p>
+              Once this has been added, run gulp sass and Bootstrap sass will be added to your css.
+            </p>
+            <p>
+              <code>
+                npm install
+              </code>
+            </p>
+            <p>
+                Once this is finished. You will notice in node_modules that Bootstrap, jQuery and popper.js have been added and can now be used.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <section class="py-4 py-md-5" id="html-example">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">4. HTML Example</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              Below is a HTML example of what links I have created and what a basic page will look like with all the Gulp modules installed and with Boostrap, jQuery & Popper.js set up.
+            </p>
+            <div class="html-example-wrapper">
+              <code>
+                <xmp>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Gulp Instruction</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.4">
+  <link type="text/css" href="fonts/out/fonts.css" rel="stylesheet">
+  <link type="text/css" href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <section class="img-bg vh-100">
+    <nav class="navbar navbar-expand-lg border-bottom border-white px-5 navbar-dark">
+      <a class="navbar-brand" href="index.html">
+        <img class="w-25 logo" src="min-img/logo-white.png" />
+        <img class="w-25 logo-dark d-none" src="min-img/logo-purple.png" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown active">
+             <a class="nav-link dropdown-toggle" href="#" id="stepsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Gulp Steps
+             </a>
+             <div class="dropdown-menu" aria-labelledby="stepsDropdown">
+               <a class="dropdown-item" href="#installing-gulp">1. Installing Gulp</a>
+               <a class="dropdown-item" href="#create-project">2. Create A Project</a>
+               <a class="dropdown-item" href="#folder-structure">3. Folder Structure</a>
+               <a class="dropdown-item" href="#sass-task">4. Sass Task</a>
+               <a class="dropdown-item" href="#js-task">5. JS Task</a>
+               <a class="dropdown-item" href="#image-task">6. Image Minified</a>
+               <a class="dropdown-item" href="#gulp-watch">7. Gulp Watch Task</a>
+               <a class="dropdown-item" href="#google-fonts">8. Google Fonts</a>
+               <a class="dropdown-item" href="#gulp-file">9. Gulp File</a>
+             </div>
+           </li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="stepsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Bootstrap, jQuery & Popper
+              </a>
+              <div class="dropdown-menu" aria-labelledby="stepsDropdown">
+                <a class="dropdown-item" href="bootstrap.html#installing-bootstrap">1. Installing Bootstrap, jQuery & Popper.js</a>
+                <a class="dropdown-item" href="bootstrap.html#linking-bootstrap">2. Linking Bootstrap</a>
+                <a class="dropdown-item" href="bootstrap.html#linking-jquery">3. Linking jQuery & Popper.js</a>
+                <a class="dropdown-item" href="bootstrap.html#html-example">4. HTML Example</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"></a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-12 text-center my-auto">
+          <img width="15%" src="min-img/gulp-logo.png" />
+          <h1 class="text-white font-weight-light main-title display-3">Gulp Instructions</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4 py-md-5" id="installing-gulp">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="font-weight-bold">1. Installing Gulp</h2>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-lg-12">
+          <div class="width-container">
+            <p>
+              You need to have <a href="https://nodejs.org/en/">Node.js</a> installed onto your computer before you can install Gulp.
+            </p>
+            <p>
+              Once you have finished installing Node.js, you can then install Gulp. You can install gulp globally using the command:
+            </p>
+            <p>
+              <code>
+                $ sudo npm install gulp -g
+              </code>
+            </p>
+            <p>
+              Now that Gulp is installed, we can create a <a href="#create-project">project</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid px-5">
+    <hr />
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="min-js/main.js"></script>
+</body>
+</html>
+
+                </xmp>
+              </code>
+            </div>
+            <p>
+              This concludes how to install Bootstrap, jQuery and popper.js with npm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="min-js/main.js"></script>
+</body>
+</html>
